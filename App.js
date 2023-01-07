@@ -9,8 +9,6 @@ import {StatusBar} from 'expo-status-bar';
 import HomeScreen from './app/tello_home';
 import FlyScreen from './app/tello_fly';
 
-//https://designcode.io/react-hooks-handbook-fetch-data-from-an-api
-
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -26,9 +24,7 @@ function App() {
 
 export default App;
 
-
-
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 2000);
 
-
+// End

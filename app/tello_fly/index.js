@@ -5,30 +5,62 @@ import { NavigationContainer } from '@react-navigation/native';
 import * as SplashScreen from 'expo-splash-screen';
 import {StatusBar} from 'expo-status-bar';
 
-
-//function FlyScreen({ route, navigation }) {
-
- 
 function FlyScreen({ route, navigation }) {
 
   const { IPAddress} = route.params;
   
   return (
     <View style={{ flex: 1 }}>
-    <View style={styles.container1}>
-      <Text style={styles.heading1}>IP Connection Working on:</Text>
-      <Text style={styles.box}>{IPAddress}</Text>
-    </View>  
-    <View style={styles.container2}>
-      <Text style={styles.spacer} >Drone Controls</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+
+      <View style={styles.container1}>
+        <Text style={styles.heading1}>IP Connection Working on:</Text>
+        <View style={styles.button}>
+          <Text style={styles.textbox}>{IPAddress}</Text>
+        </View>
+      </View> 
+
+      <View style={styles.container2}>
+        <Text style={styles.spacer} >Drone Controls</Text>
       </View>
+
       <View style={styles.container3}>
+        <View style={styles.control1}>
+          <Text style={styles.controltext}> Left </Text>
+        </View>
+        <View style={styles.control2}>
+          <Text style={styles.controltext}> Turn </Text>
+          <Text style={styles.controltext}> Left </Text>
+        </View>
+        <View style={styles.control2}>
+          <Text style={styles.controltext}> Turn </Text>
+          <Text style={styles.controltext}> Right </Text>
+        </View>
+        <View style={styles.control1}>
+          <Text style={styles.controltext}> Right </Text>
+        </View>
       </View>
+
       <View style={styles.container4}>
       </View>
+
       <View style={styles.container5}>
+          <Text></Text>
+          <Text></Text>
+          <Text></Text>
+          <Text></Text>
+          <Text></Text>
+          <Pressable
+              onPress={() => 
+              navigation.navigate('Home', {
+            })}>   
+                <View>
+                  <View style={styles.button2}>
+                  <Text style={styles.button2text}> Return to Home </Text>
+                  </View>
+                </View>
+          </Pressable>
       </View>
+
     </View>
   );
 }
@@ -40,9 +72,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     paddingTop: 10,
-    //marginTop: 20,
     backgroundColor: "white",
-    //justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
     borderColor: "brown",
@@ -60,20 +90,18 @@ const styles = StyleSheet.create({
   },
   container3: {
     flex: 1,
-    flexDirection: "column",
-    paddingTop: 10,
+    flexDirection: "row",
     backgroundColor: "white",
     borderWidth: 1,
     borderColor: "brown",
     alignItems: "center",
+    paddingLeft: 10,
   },
   container4: {
     flex: 1,
     flexDirection: "column",
     paddingTop: 10,
     paddingHorizontal: 35,
-    //paddingTop: 25,
-    //paddingBottom: 45,
     backgroundColor: "white",
     borderWidth: 1,
     borderColor: "brown",
@@ -84,53 +112,83 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     paddingTop: 10,
     paddingHorizontal: 35,
-    //paddingTop: 25,
-    //paddingBottom: 45,
     backgroundColor: "white",
     borderWidth: 1,
     borderColor: "brown",
     alignItems: "center",
   },
-  box: {
-    //flex: 1,
-    //marginTop: 10,
-    //marginBottom: 40,
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 40,
+    width: 210,
+    marginBottom: 120,
+    borderRadius: 8,
+    backgroundColor: 'lightgreen',
+  },
+  button2: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 40,
+    width: 210,
+    marginBottom: 120,
+    borderRadius: 8,
+    fontSize: 16,
+    fontWeight: "bold",
+    backgroundColor: 'grey',
+  },
+  button2text: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  textbox: {
     height: 50,
     width: 210,
-    paddingTop: 10,
-    //margin: 10,
-    backgroundColor: "lightgreen",
-    borderRadius: 10,
-    borderWidth: 3,
-    borderColor: "black",
+    paddingTop: 14,
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "bold",
-    
   },
   heading1: {
-    //flex: 1,
     flexDirection: "column",
     marginBottom: 10,
-    //paddingTop: 40,
-    //backgroundColor: "dodgerblue",
-    //backgroundColor: "green",
-    //borderWidth: 1,
-    //borderColor: "brown",
     alignItems: "center",
     fontSize: 14,
-    fontWeight: "bold",
   },
   spacer: {
-    //flex: 1,
     flexDirection: "column",
-    //backgroundColor: "gold",
     backgroundColor: "white",
-    //borderWidth: 1,
-    //borderColor: "brown",
     alignItems: "center",
   },
-  
+  control1: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 60,
+    width: 80,
+    marginLeft: 6,
+    marginRight: 6,
+    borderRadius: 8,
+    backgroundColor: 'plum',
+    borderWidth: 3,
+    borderColor: "darkslategrey",
+  },
+  controltext: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "black",
+  },
+  control2: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 70,
+    width: 70,
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 38,
+    backgroundColor: 'plum',
+    borderWidth: 3,
+    borderColor: "darkslategrey",
+  }
 });
