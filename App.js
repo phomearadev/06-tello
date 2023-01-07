@@ -8,6 +8,7 @@ import {StatusBar} from 'expo-status-bar';
 
 import HomeScreen from './app/tello_home';
 import FlyScreen from './app/tello_fly';
+import CommandScreen from './app/tello_command';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Fly" component={FlyScreen} />
+        <Stack.Screen name="Command" component={CommandScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

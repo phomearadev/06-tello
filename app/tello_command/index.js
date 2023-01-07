@@ -5,134 +5,44 @@ import { NavigationContainer } from '@react-navigation/native';
 import * as SplashScreen from 'expo-splash-screen';
 import {StatusBar} from 'expo-status-bar';
 
-function FlyScreen({ route, navigation }) {
+function CommandScreen({ route, navigation }) {
 
-  const { IPAddress} = route.params;
+  const { MyCommand} = route.params;
   
   return (
     <View style={{ flex: 1 }}>
 
       <View style={styles.container1}>
-        <Text style={styles.heading1}>IP Connection Working on:</Text>
+        <Text style={styles.heading1}>Command Sent</Text>
         <View style={styles.button}>
-          <Text style={styles.textbox}>{IPAddress}</Text>
+        <Text style={styles.textbox}>{MyCommand}</Text>
         </View>
       </View> 
 
       <View style={styles.container2}>
-        <View style={styles.control3}>
-        <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Fly_Forward",
-            })}>  
-          <Text style={styles.controltext}> Forward </Text>
-          </Pressable>
-        </View>
-        <View style={styles.control3}>
-        <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Fly_Backward",
-            })}>  
-          <Text style={styles.controltext}> Backward </Text>
-          </Pressable>
-        </View>
+        
       </View>
 
       <View style={styles.container3}>
-        <View style={styles.control1}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Fly_Left",
-            })}>  
-          <Text style={styles.controltext}> Left </Text>
-          </Pressable>
-        </View>
-        <View style={styles.control2}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Turn_Left",
-            })}>  
-          <Text style={styles.controltext}> Turn </Text>
-          <Text style={styles.controltext}> Left </Text>
-          </Pressable>
-        </View>
-        <View style={styles.control2}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Turn_Right",
-            })}>  
-          <Text style={styles.controltext}> Turn </Text>
-          <Text style={styles.controltext}> Right </Text>
-          </Pressable>      
-        </View>
-        <View style={styles.control1}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Fly_Right",
-            })}>  
-            <Text style={styles.controltext}> Right </Text>
-          </Pressable>
-        </View>
+        
       </View>
 
       <View style={styles.container4}>
-        <View style={styles.control3}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Fly_Up",
-            })}>  
-            <Text style={styles.controltext}> Up </Text>
-          </Pressable>  
-        </View>
-        <View style={styles.control3}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Fly_Down",
-            })}>  
-            <Text style={styles.controltext}> Down </Text>
-          </Pressable>      
-        </View>
+      
       </View>
 
       <View style={styles.container5}>
-        <View style={styles.control4}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Take_Off",
-            })}>  
-            <Text style={styles.controltext}> Take </Text>
-            <Text style={styles.controltext}> Off </Text>       
-          </Pressable>
-        </View>
-
-        <View style={styles.control4}>
-          <Pressable
-              onPress={() => 
-              navigation.navigate('Command', {
-                MyCommand: "Land",
-            })}>  
-            <Text style={styles.controltext}> Land </Text>           
-          </Pressable>           
-        </View>   
+       
       </View>
 
       <View style={styles.container6}>
         <Pressable
               onPress={() => 
-              navigation.navigate('Home', {
+              navigation.navigate('Fly', {
             })}>   
                 <View>
                   <View style={styles.button2}>
-                  <Text style={styles.button2text}> Return to Home </Text>
+                  <Text style={styles.button2text}> Return to Flying </Text>
                   </View>
                 </View>
         </Pressable>
@@ -142,7 +52,7 @@ function FlyScreen({ route, navigation }) {
   );
 }
 
-export default FlyScreen;
+export default CommandScreen;
 
 const styles = StyleSheet.create({
   container1: {
