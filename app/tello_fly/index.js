@@ -15,8 +15,8 @@ function FlyScreen({ route, navigation }) {
   
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={styles.heading1}>Welcome to Mario's</Text>
-      <Text style={styles.spacer} >IP Connection Working on: {emailAddress}</Text>
+      <Text style={styles.heading1}>IP Connection Working on: {emailAddress}</Text>
+      <Text style={styles.spacer} >Drone Controls</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
