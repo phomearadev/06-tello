@@ -28,7 +28,7 @@ function HomeScreen({ navigation }) {
         <Text style={styles.title}> Enter IP Address:  </Text>
         <TextInput 
         style={styles.title} onChangeText={(Text) => setInput(text)}
-        style={styles.title}
+        style={styles.title2}
         placeholder="For Example: 192.168.10.1"
         value={text}
         onChangeText={onChangeText}
@@ -52,7 +52,7 @@ function HomeScreen({ navigation }) {
             
             
               <View>
-                  <Text style={styles.title2}>
+                  <Text style={styles.title3}>
                   Test IP Connection and Start
                   </Text>  
               </View>
@@ -128,6 +128,9 @@ const styles = StyleSheet.create({
     margin: 10,
     backgroundColor: "white",
     //backgroundColor: "lightgrey",
+    //backgroundColor: "gray",
+    //padding: 20,
+    borderRadius: 10,
     borderWidth: 2,
     borderColor: "grey"
   },
@@ -142,11 +145,12 @@ const styles = StyleSheet.create({
     height: 10,
     //alignItems: "center",
     margin: 10,
+    borderRadius: 10,
     backgroundColor: "lightgreen",
     //backgroundColor: "white",
     //backgroundColor: "lightgrey",
-    //borderWidth: 2,
-    //borderColor: "brown"
+    borderWidth: 2,
+    borderColor: "grey"
   },
   title: {
     marginTop: 10,
@@ -156,6 +160,14 @@ const styles = StyleSheet.create({
     title: "ME",
   },
   title2: {
+    marginTop: 10,
+    textAlign: "center",
+    fontSize: 18,
+    color: "grey",
+    fontWeight: "bold",
+    title: "ME",
+  },
+  title3: {
     marginTop: 18,
     textAlign: "center",
     fontSize: 18,
