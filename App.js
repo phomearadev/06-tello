@@ -10,6 +10,9 @@ import HomeScreen from './app/tello_home';
 import FlyScreen from './app/tello_fly';
 import CommandScreen from './app/tello_command';
 
+// App to control flight of a TELLO DRONE
+// Philip O'Meara January 2023
+
 const Stack = createNativeStackNavigator();
 
 function App() {
