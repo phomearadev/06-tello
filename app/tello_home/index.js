@@ -44,12 +44,25 @@ function HomeScreen({ navigation }) {
       <View style={styles.box2}>  
         <Pressable
             onPress={() => 
+            navigation.navigate('Fly', {
+            IPAddress: text,
+          })}>  
+              <View>
+                  <Text style={styles.title3}>
+                  Test IP & Start (PRESSABLE)
+                  </Text>  
+              </View>
+        </Pressable>
+      </View>
+      <View style={styles.box2}>  
+        <Pressable
+            onPress={() => 
             navigation.navigate('ButtonFly', {
             IPAddress: text,
           })}>  
               <View>
                   <Text style={styles.title3}>
-                  Test IP Connection and Start
+                  Test IP & Start (BUTTON)
                   </Text>  
               </View>
         </Pressable>
@@ -83,8 +96,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     paddingHorizontal: 35,
-    paddingTop: 25,
-    paddingBottom: 45,
     backgroundColor: "white",
   },
   box: {
@@ -100,8 +111,8 @@ const styles = StyleSheet.create({
   },
   box2: {
     flex: 1,
-    marginTop: 50,
-    marginBottom: 50,
+    marginTop: 10,
+    marginBottom: 10,
     height: 10,
     margin: 10,
     borderRadius: 10,
@@ -147,7 +158,7 @@ const styles = StyleSheet.create({
   },
   tello3title2: {
     textAlign: "center",
-    marginTop: 10,
+    marginTop: 5,
     fontSize: 15,
     color: 'black'
   },

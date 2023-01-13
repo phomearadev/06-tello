@@ -5,24 +5,21 @@ import normalize from '../utils/normalizeSizes';
 import withPressAnimation from '../utils/withPressAnimation';
 
 
-// LINE 25: font-size: ${normalize(25)};
+
 
 export const ButtonStyles = styled.View`
   align-self: center;
   justify-content: center;
   background-color: #ffd200;
-  padding-horizontal: ${normalize(30)};
-  height: ${normalize(60)};
-  border-radius: ${normalize(30)};
+  padding-horizontal: ${normalize(15)};
+  height: ${normalize(45)};
+  border-radius: ${normalize(20)};
   align-items: center;
-  shadow-color: #ffd200;
-  shadow-opacity: 0.8;
-  shadow-radius: 30;
 `;
 
 export const TextStyles = styled.Text`
   color: #000;
-  font-size: 30;
+  font-size: ${normalize(15)};
 `;
 
 /**
