@@ -44,7 +44,7 @@ function HomeScreen({ navigation }) {
       <View style={styles.box2}>  
         <Pressable
             onPress={() => 
-            navigation.navigate('Fly', {
+            navigation.navigate('ButtonFly', {
             IPAddress: text,
           })}>  
               <View>

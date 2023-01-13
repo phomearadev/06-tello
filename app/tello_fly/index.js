@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import * as SplashScreen from 'expo-splash-screen';
 import {StatusBar} from 'expo-status-bar';
 
+
+
 function FlyScreen({ route, navigation }) {
 
   const { IPAddress} = route.params;

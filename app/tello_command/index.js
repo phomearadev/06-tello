@@ -38,7 +38,7 @@ function CommandScreen({ route, navigation }) {
       <View style={styles.container6}>
         <Pressable
               onPress={() => 
-              navigation.navigate('Fly', {
+              navigation.navigate('ButtonFly', {
             })}>   
                 <View>
                   <View style={styles.button2}>
