@@ -15,3 +15,6 @@ https://morioh.com/p/3082a32273d7
 
 Animated Pressable
 https://stackoverflow.com/questions/69828082/smooth-transitions-with-the-new-pressable-component
+
+cool colour switch animation
+https://www.youtube.com/watch?v=vQNg06Hf0MQ
