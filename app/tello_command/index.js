@@ -13,10 +13,7 @@ function CommandScreen({ route, navigation }) {
     <View style={{ flex: 1 }}>
 
       <View style={styles.container1}>
-        <Text style={styles.heading1}>Command Sent</Text>
-        <View style={styles.button}>
-        <Text style={styles.textbox}>{MyCommand}</Text>
-        </View>
+       
       </View> 
 
       <View style={styles.container2}>
@@ -24,7 +21,10 @@ function CommandScreen({ route, navigation }) {
       </View>
 
       <View style={styles.container3}>
-        
+      <Text style={styles.heading1}>Command Sent</Text>
+        <View style={styles.button}>
+        <Text style={styles.textbox}>{MyCommand}</Text>
+        </View>
       </View>
 
       <View style={styles.container4}>
@@ -38,7 +38,7 @@ function CommandScreen({ route, navigation }) {
       <View style={styles.container6}>
         <Pressable
               onPress={() => 
-              navigation.navigate('ButtonFly', {
+              navigation.navigate('Fly', {
             })}>   
                 <View>
                   <View style={styles.button2}>
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   container3: {
     flex: 2,
-    flexDirection: "row",
+    flexDirection: "Column",
     backgroundColor: "white",
     alignItems: "center",
     paddingLeft: 10,

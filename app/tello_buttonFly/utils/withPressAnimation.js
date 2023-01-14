@@ -2,6 +2,8 @@ import React from 'react';
 import { Animated, TouchableWithoutFeedback } from 'react-native';
 import PropTypes from 'prop-types';
 
+
+
 const withPress = Component => class WithPress extends React.Component {
     static propTypes = {
       /**
@@ -14,11 +16,7 @@ const withPress = Component => class WithPress extends React.Component {
       disabled: PropTypes.bool,
     };
 
-    static defaultProps = {
-      onPress: () => {},
-      disabled: false,
-    };
-
+    
     state = {
       animatedStartValue: new Animated.Value(1),
     }
@@ -68,5 +66,6 @@ const withPress = Component => class WithPress extends React.Component {
       );
     }
 };
+
 
 export default withPress;

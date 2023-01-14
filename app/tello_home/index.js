@@ -1,5 +1,5 @@
 import { Pressable, Image, StyleSheet, Text, View, TextInput } from 'react-native';
-
+import { Animated } from 'react-native';
 import React from 'react';
 import { Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -11,6 +11,36 @@ import {StatusBar} from 'expo-status-bar';
 function HomeScreen({ navigation }) {
   const [text, onChangeText] = React.useState(null);
   //console.log(input);
+    const animatedA = new Animated.Value(1);
+    const animatedB = new Animated.Value(1);
+      const fadeInA = () => {
+        Animated.timing(animatedA, {
+          toValue: 0.4,
+          duration: 100,
+          useNativeDriver: true,
+        }).start();
+      };
+      const fadeOutA = () => {
+        Animated.timing(animatedA, {
+          toValue: 1,
+          duration: 200,
+          useNativeDriver: true,
+        }).start();
+      };
+      const fadeInB = () => {
+        Animated.timing(animatedB, {
+          toValue: 0.4,
+          duration: 100,
+          useNativeDriver: true,
+        }).start();
+      };
+      const fadeOutB = () => {
+        Animated.timing(animatedB, {
+          toValue: 1,
+          duration: 200,
+          useNativeDriver: true,
+        }).start();
+      }; 
 
   return (  
   <View style={{ flex: 1}}>  
@@ -42,35 +72,60 @@ function HomeScreen({ navigation }) {
 
     <View style={styles.container4}>
       <View style={styles.box2}>  
-        <Pressable
-            onPress={() => 
+      <Pressable onPressIn={fadeInA} onPressOut={() => 
             navigation.navigate('Fly', {
             IPAddress: text,
-          })}>  
+          })}>
+            <Animated.View
+              style={{
+                opacity: animatedA,
+                paddingTop: 20,
+                paddingBottom: 20,
+                borderRadius: 10,
+                backgroundColor: "darkgreen",
+                borderWidth: 2,
+                borderColor: "grey"
+              }}
+            >
               <View>
                   <Text style={styles.title3}>
                   Test IP & Start (PRESSABLE)
-                  </Text>  
+                  </Text>
               </View>
-        </Pressable>
+            </Animated.View>
+          </Pressable>    
+
       </View>
-      <View style={styles.box2}>  
-        <Pressable
-            onPress={() => 
+
+      <View style={styles.box2}>     
+        <Pressable onPressIn={fadeInB} onPressOut={() => 
             navigation.navigate('ButtonFly', {
             IPAddress: text,
-          })}>  
+          })}>
+            <Animated.View
+              style={{
+                opacity: animatedB,
+                paddingTop: 20,
+                paddingBottom: 20,
+                borderRadius: 10,
+                backgroundColor: "darkgreen",
+                borderWidth: 2,
+                borderColor: "grey"
+              }}
+            >
               <View>
                   <Text style={styles.title3}>
                   Test IP & Start (BUTTON)
-                  </Text>  
+                  </Text>
               </View>
-        </Pressable>
+            </Animated.View>
+          </Pressable>    
       </View>
     </View>
 
   </View>
   );
+
 }
   
 const styles = StyleSheet.create({
@@ -111,9 +166,9 @@ const styles = StyleSheet.create({
   },
   box2: {
     flex: 1,
-    marginTop: 10,
-    marginBottom: 10,
-    height: 10,
+    
+    
+    height: 20,
     margin: 10,
     borderRadius: 10,
     backgroundColor: "lightgreen",
@@ -136,7 +191,6 @@ const styles = StyleSheet.create({
     title: "ME",
   },
   title3: {
-    marginTop: 18,
     textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",

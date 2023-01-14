@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Text } from 'react-native';
 import styled from 'styled-components';
 import Button from './components/Button';
@@ -12,10 +12,13 @@ const Wrapper = styled.View`
   width: 100%;
 `;
 
+
+
 function ButtonFlyScreen({ route, navigation }) {
 
   const { IPAddress} = route.params;
-  
+
+
   return (
     <View style={{ flex: 1 }}>
 
@@ -34,6 +37,7 @@ function ButtonFlyScreen({ route, navigation }) {
           <Button>Backward</Button>  
         </Wrapper>
       </View> 
+      
 
       <View style={styles.container2}>
         <Wrapper>
@@ -83,7 +87,8 @@ function ButtonFlyScreen({ route, navigation }) {
       </View>
     </View>
   );
-}
+};
+
 
 export default ButtonFlyScreen;
 
