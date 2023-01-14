@@ -13,3 +13,5 @@ https://www.amazon.co.uk/Ryze-Tello-Drone-Powered-DJI/dp/B078XV32CJ/ref=asc_df_B
 research on button types
 https://morioh.com/p/3082a32273d7
 
+Animated Pressable
+https://stackoverflow.com/questions/69828082/smooth-transitions-with-the-new-pressable-component
