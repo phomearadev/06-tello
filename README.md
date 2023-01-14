@@ -18,3 +18,6 @@ https://stackoverflow.com/questions/69828082/smooth-transitions-with-the-new-pre
 
 cool colour switch animation
 https://www.youtube.com/watch?v=vQNg06Hf0MQ
+
+adding sounds to react native app
+https://blog.logrocket.com/how-to-play-sounds-in-react-native-using-react-native-sound/
