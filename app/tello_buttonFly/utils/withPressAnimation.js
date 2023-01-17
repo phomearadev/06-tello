@@ -26,7 +26,7 @@ const withPress = Component => class WithPress extends React.Component {
       Animated.timing(
         animatedStartValue,
         {
-          toValue: 0.8,
+          toValue: 0.5,
           duration: 200,
           useNativeDriver: true,
         },
@@ -39,10 +39,12 @@ const withPress = Component => class WithPress extends React.Component {
         animatedStartValue,
         {
           toValue: 1,
-          duration: 200,
+          duration: 500,
           useNativeDriver: true,
         },
       ).start();
+    
+      
     }
 
     render() {

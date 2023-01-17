@@ -33,7 +33,9 @@ function ButtonFlyScreen({ route, navigation }) {
       
       <View style={styles.container2}>
         <Wrapper>  
-          <Button>Forward</Button>   
+          <Button>
+            Forwardz
+            </Button>   
         </Wrapper>
 
         <Wrapper>

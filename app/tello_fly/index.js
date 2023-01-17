@@ -564,5 +564,5 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: "darkslategrey",
     marginTop: 40,
-  }
+  },
 });
