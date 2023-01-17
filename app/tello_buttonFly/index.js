@@ -4,21 +4,23 @@ import styled from 'styled-components';
 import Button from './components/Button';
 import { Pressable, Image, StyleSheet, View, SafeAreaView, TextInput } from 'react-native';
 
+
 const Wrapper = styled.View`
   align-self: center;
   justify-content: center;
-  background-color: #151667;
+  bbackground-color: #151667;
   flex: 1;
   width: 100%;
 `;
 
+//background-color: #151667;
+//background-color: #155567;
 
 
 function ButtonFlyScreen({ route, navigation }) {
 
   const { IPAddress} = route.params;
-
-
+  
   return (
     <View style={{ flex: 1 }}>
 
@@ -30,9 +32,10 @@ function ButtonFlyScreen({ route, navigation }) {
       </View> 
       
       <View style={styles.container2}>
-        <Wrapper>
-          <Button>Forward</Button>  
+        <Wrapper>  
+          <Button>Forward</Button>   
         </Wrapper>
+
         <Wrapper>
           <Button>Backward</Button>  
         </Wrapper>
@@ -226,6 +229,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: "darkslategrey",
   },
+  
   control4: {
     alignItems: 'center',
     justifyContent: 'center',
