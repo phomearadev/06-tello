@@ -107,7 +107,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control3}>
           <Pressable onPressIn={fadeInA} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Fly_Forward",
+            MyCommand: "forward10",
           })}>
             <Animated.View
               style={{
@@ -134,7 +134,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control3}>
         <Pressable onPressIn={fadeInB} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Fly_Backward",
+            MyCommand: "back10",
           })}>
             <Animated.View
               style={{
@@ -163,7 +163,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control1}>
         <Pressable onPressIn={fadeInC} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Fly_Left",
+            MyCommand: "left10",
           })}>
             <Animated.View
               style={{
@@ -190,7 +190,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control2}>
         <Pressable onPressIn={fadeInD} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Turn_Left",
+            MyCommand: "ccw50",
           })}>
             <Animated.View
               style={{
@@ -218,7 +218,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control2}>
         <Pressable onPressIn={fadeInE} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Turn_Right",
+            MyCommand: "cw50",
           })}>
             <Animated.View
               style={{
@@ -246,7 +246,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control1}>
         <Pressable onPressIn={fadeInF} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Fly_Right",
+            MyCommand: "right10",
           })}>
             <Animated.View
               style={{
@@ -275,7 +275,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control3}>
         <Pressable onPressIn={fadeInG} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Fly_Up",
+            MyCommand: "up10",
           })}>
             <Animated.View
               style={{
@@ -302,7 +302,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control3}>
         <Pressable onPressIn={fadeInH} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Fly_Down",
+            MyCommand: "down10",
           })}>
             <Animated.View
               style={{
@@ -331,7 +331,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control4}>
         <Pressable onPressIn={fadeInI} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Take_Off",
+            MyCommand: "takeoff",
           })}>
             <Animated.View
               style={{
@@ -360,7 +360,7 @@ function FlyScreen({ route, navigation }) {
         <View style={styles.control4}>
         <Pressable onPressIn={fadeInJ} onPressOut={() => 
             navigation.navigate('Command', {
-            MyCommand: "Land",
+            MyCommand: "land",
           })}>
             <Animated.View
               style={{

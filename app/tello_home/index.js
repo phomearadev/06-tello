@@ -58,7 +58,7 @@ function HomeScreen({ navigation }) {
           <TextInput 
           style={styles.title} onChangeText={(Text) => setInput(text)}
           style={styles.title2}
-          placeholder="For Example: 192.168.10.1"
+          placeholder="Tello IP:192.168.10.1 UDP PORT:8889"
           value={text}
           onChangeText={onChangeText}
           />
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
   title2: {
     marginTop: 10,
     textAlign: "center",
-    fontSize: 18,
+    fontSize: 15,
     color: "grey",
     fontWeight: "bold",
     title: "ME",
