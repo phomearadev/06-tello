@@ -14,7 +14,8 @@ import CommandScreen from './app/tello_command';
 
 // App to control flight of a TELLO DRONE
 // Philip O'Meara January 2023
-// VERSION ON 24 JAN 2023
+// VERSION ON 24 JAN 2023 for Chris Matchett
+
 
 const Stack = createNativeStackNavigator();
 
